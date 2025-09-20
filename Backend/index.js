@@ -12,6 +12,7 @@ app.use(
   cors({
     origin: "https://bookstoresunil.onrender.com",
     origin: "http://localhost:5173",
+    origin: "http://localhost:5174",
     credentials: true,
   })
 );
