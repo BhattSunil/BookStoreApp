@@ -9,11 +9,15 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 5173,
-    historyApiFallback: true,
+    historyApiFallback: {
+      disableDotRule: true
+    }
   },
   preview: {
     port: 5173,
-    historyApiFallback: true,
+    historyApiFallback: {
+      disableDotRule: true
+    }
   },
   build: {
     outDir: 'dist',
@@ -21,6 +25,8 @@ export default defineConfig({
       output: {
         manualChunks: undefined
       }
-    }
+    },
+    assetsDir: 'assets',
+    copyPublicDir: true
   }
 });
