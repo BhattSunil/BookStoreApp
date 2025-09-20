@@ -13,7 +13,7 @@ app.use(
     origin: [
       "https://bookstore-sunil-bhatt.onrender.com",
       "http://localhost:5173",
-      "http://localhost:5174",
+      "http://localhost:5174"
     ],
     credentials: true,
   })
