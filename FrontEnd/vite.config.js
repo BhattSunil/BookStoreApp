@@ -9,8 +9,18 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 5173,
+    historyApiFallback: true,
+  },
+  preview: {
+    port: 5173,
+    historyApiFallback: true,
   },
   build: {
-    outDir: 'dist', // Output directory for build
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 });
