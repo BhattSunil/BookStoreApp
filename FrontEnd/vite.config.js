@@ -7,26 +7,19 @@ export default defineConfig({
   base: "/",
   plugins: [react(), tailwindcss()],
   server: {
-    host: "0.0.0.0",
     port: 5173,
-    historyApiFallback: {
-      disableDotRule: true
-    }
-  },
-  preview: {
-    port: 5173,
-    historyApiFallback: {
-      disableDotRule: true
-    }
+    historyApiFallback: true
   },
   build: {
     outDir: 'dist',
+    sourcemap: true,
+    commonjsOptions: {
+      include: []
+    },
     rollupOptions: {
       output: {
         manualChunks: undefined
       }
-    },
-    assetsDir: 'assets',
-    copyPublicDir: true
+    }
   }
 });
