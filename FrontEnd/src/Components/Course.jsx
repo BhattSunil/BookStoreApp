@@ -1,24 +1,23 @@
-import { useState } from 'react';
-import Cards from './Cards';
-import {Link} from 'react-router-dom'
-import { useEffect } from 'react';
-import axios from 'axios'
+import { useState } from "react";
+import Cards from "./Cards";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
 function Course() {
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/book`);
 
-  const [book,setBook]=useState([])
-  useEffect(()=>{
-      const getBook =async ()=>{
-        try{
-         const res = await axios.get("http://localhost:4001/book");
-         console.log(res.data)
-         setBook(res.data)
-        }catch(error){
-          console.log(error)
-
-        }
-      } 
-      getBook();
-  },[])
+        console.log(res.data);
+        setBook(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBook();
+  }, []);
   return (
     <>
       <div className="md:max-w-screen-2xl text-black dark:bg-slate-900 dark:text-white  pt-20  bg-white container mx-auto md:px-15 px-4">
@@ -51,4 +50,4 @@ function Course() {
   );
 }
 
-export default Course
+export default Course;

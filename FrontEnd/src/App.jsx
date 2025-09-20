@@ -13,7 +13,7 @@ function App() {
   console.log(authUser);
   return (
     <>
-      <div className="">
+      <div className="dark:bg-slate-900 dark:text-white">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route
