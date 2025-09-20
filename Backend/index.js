@@ -10,7 +10,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://your-frontend-url.onrender.com", // Replace with your frontend URL
+    origin: "https://bookstoresunil.onrender.com",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
