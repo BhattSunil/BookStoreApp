@@ -18,6 +18,15 @@ app.use(express.json());
 
 dotenv.config();
 
+
+// After your API routes
+app.use(express.static(path.join(__dirname, "client/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/dist/index.html"));
+});
+
+
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoURI;
 
