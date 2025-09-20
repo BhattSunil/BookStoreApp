@@ -10,11 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "https://bookstoresunil.onrender.com/",
-      "http://localhost:5173",
-      "http://localhost:5174",
-    ],
+    origin: "*",
     credentials: true,
   })
 );
