@@ -8,7 +8,12 @@ import userRoute from "./route/user.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://your-frontend-url.onrender.com", // Replace with your frontend URL
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 dotenv.config();
