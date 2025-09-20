@@ -15,7 +15,7 @@ function App() {
     <>
       <div className="dark:bg-slate-900 dark:text-white">
      <HashRouter>
-        <Routes>
+    
           <Route path="/" element={<HomePage />} />
           <Route
             path="/course"
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
        
-        </Routes>
+     
         </HashRouter>
       </div>
       <Toaster position="top-right" reverseOrder={false} />
