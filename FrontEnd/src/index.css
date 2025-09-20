@@ -1,0 +1,25 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Import Tailwind (v4 way, no config file needed) */
+@import "tailwindcss";
+
+/* Enable dark mode variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Add DaisyUI plugin */
+@plugin "daisyui";
+
+/* Base styles */
+html {
+  @apply bg-white text-black;
+}
+
+html.dark {
+  @apply bg-slate-900 text-white;
+}
+
+/* Apply custom font */
+body {
+  font-family: 'Roboto', sans-serif;
+}
